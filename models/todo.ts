@@ -5,3 +5,11 @@ export interface ToDo {
   important: boolean
   done: boolean 
 }
+<<<<<<< HEAD
+ 
+=======
+
+>>>>>>> development
+export interface List {
+  list: ToDo[]
+}
