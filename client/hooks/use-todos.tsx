@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import request from 'superagent'
-// import { API_HOST, TOKEN } from '../.env'
+// import { API_HOST, TOKEN } from '../../.env'
 
 const API_HOST = 'https://paataka.cloud/api/_/team-todo/'
 const TOKEN = 'inboT4cuIWA'
