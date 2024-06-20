@@ -7,9 +7,10 @@ export function useDelete(id: number) {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: async (data) => {
-      await request
+      const res = await request
         .delete(`${API_HOST}/todo/${id}`)
         .auth(TOKEN, { type: 'bearer' })
+      return res.body
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['todos', id] })
