@@ -1,29 +1,20 @@
 //imports
 import { ChangeEvent, FormEvent, useState } from 'react'
-// import { useCreateToDo } from '' //from hooks to be built
-import { ToDo } from '../../models/todo.ts'
+import { useCreateToDo } from '../hooks/use-todos.tsx'
 
 export default function WriteToDo() {
-  const createToDo = useCreateToDo() //create this hook
-  const [formState, setFormState] = useState<ToDo>({
+  const createToDo = useCreateToDo()
+  const [formState, setFormState] = useState<{ name: string }>({
     name: '',
-    id: 0,
-    created_on: 0,
-    important: false,
-    done: false,
   })
 
   const submit = () => {
     setFormState({
       name: '',
-      id: 0,
-      created_on: 0,
-      important: false,
-      done: false,
     })
   }
 
-  createToDo.mutate<ToDo>({ ...formState })
+  createToDo.mutate()
 
   const handleKeyDown = (evt: React.KeyboardEvent<HTMLInputElement>) => {
     if (evt.key === 'Enter' && evt.ctrlKey) {
