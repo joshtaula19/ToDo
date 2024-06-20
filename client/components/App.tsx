@@ -1,8 +1,14 @@
+import '../main.css'
+
 function App() {
   return (
     <div>
-      <h1>App</h1>
-      <p>React development has begun!</p>
+      <h1 className="page-title">To Do List</h1>
+      <div className="todo-container">
+        <ul className="todo-list">
+          <li className="new-todo"></li>
+        </ul>
+      </div>
     </div>
   )
 }
