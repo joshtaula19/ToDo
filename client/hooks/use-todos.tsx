@@ -25,6 +25,7 @@ export function useCreateToDo() {
 
   return useMutation({
     mutationFn: async (text) => {
+      // console.log('inside the hook:', text)
       const formData = {
         important: false,
         name: text,
@@ -34,7 +35,7 @@ export function useCreateToDo() {
       const res = await request
         .post(`${API_HOST}/todo`)
         .auth(TOKEN, { type: 'bearer' })
-        .send({ formData })
+        .send(formData)
 
       return res.body
     },
