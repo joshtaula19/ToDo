@@ -24,7 +24,7 @@ export function useCreateToDo() {
   const qc = useQueryClient()
 
   return useMutation({
-    mutationFn: async (text) => {
+    mutationFn: async (text: string) => {
       const formData = {
         important: false,
         name: text,
@@ -34,7 +34,7 @@ export function useCreateToDo() {
       const res = await request
         .post(`${API_HOST}/todo`)
         .auth(TOKEN, { type: 'bearer' })
-        .send({ formData })
+        .send(formData)
 
       return res.body
     },
