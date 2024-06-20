@@ -25,10 +25,16 @@ export function useCreateToDo() {
 
   return useMutation({
     mutationFn: async (text) => {
+      const formData = {
+        important: false,
+        name: text,
+        done: false,
+        created_on: Date.now(),
+      }
       const res = await request
         .post(`${API_HOST}/todo`)
         .auth(TOKEN, { type: 'bearer' })
-        .send({ text })
+        .send({ formData })
 
       return res.body
     },
