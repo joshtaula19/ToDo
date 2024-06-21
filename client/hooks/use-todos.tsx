@@ -24,8 +24,7 @@ export function useCreateToDo() {
   const qc = useQueryClient()
 
   return useMutation({
-    mutationFn: async (text) => {
-      // console.log('inside the hook:', text)
+    mutationFn: async (text: string) => {
       const formData = {
         important: false,
         name: text,

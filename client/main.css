@@ -25,13 +25,18 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--background-color);
-  padding: 30px;
+  padding: 25px;
   border-radius: 5px;
+  width: 90%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.todo-list {
+  height: 300px;
+}
+
 .to-do-text {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border: 1px solid var(--secondary-color);
   border-radius: 3px;
