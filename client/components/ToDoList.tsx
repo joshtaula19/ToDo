@@ -39,11 +39,14 @@ export function TodoList() {
     <div>
       <ul>
         {data.items.map((todo: ToDo) => (
-          <li className="todo-li" key={todo.id}>
+          <li
+            className={`todo-li ${todo.important ? 'important' : ''}`}
+            key={todo.id}
+          >
             {todo.name}
             <div className="button-container">
               <button
-                className="button"
+                className={`button ${todo.important ? 'important-button' : ''}`}
                 onClick={() => handleClickIm(todo)}
                 aria-label={`Mark as ${
                   todo.important ? 'not important' : 'important'
