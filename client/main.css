@@ -18,11 +18,11 @@
   background-color: var(--background-color);
   border-radius: 1em;
   padding: 15px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Cambria, Cochin;
   color: var(--text-color);
   margin: 5px;
-  width: 200px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,11 +62,15 @@
 .todo-container {
   display: flex;
   flex-wrap: wrap;
-  max-width: auto;
+  flex-direction: row;
+  max-height: 750px;
+  margin: 5px;
+  max-width: 100%;
   background-color: var(--secondary-color);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 .new-todo {
