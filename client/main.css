@@ -5,13 +5,19 @@
   --background-color: #f9f7f3;
 }
 
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .page-title {
+  text-align: center;
   display: inline-block;
   padding: 20px;
   color: var(--primary-color);
   font-size: 40px;
   font-family: Cambria, Cochin;
-  margin-bottom: 20px;
 }
 
 .todo-li {
@@ -22,7 +28,8 @@
   font-family: Cambria, Cochin;
   color: var(--text-color);
   margin: 5px;
-  width: 250px;
+  height: 50px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,10 +44,9 @@
 .important-button {
   font-size: 30px;
   border: 2px solid red;
-  padding: 10px;
   color: red;
   position: absolute;
-  top: 50%;
+  top: 20%;
   right: 10px;
   transform: translateY(-50%);
   display: flex;
@@ -61,20 +67,21 @@
 
 .todo-container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   max-height: 750px;
   margin: 5px;
-  max-width: 100%;
+  max-width: auto;
   background-color: var(--secondary-color);
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  /* overflow-y: auto; */
 }
 
 .todo-list-entire {
   display: flex;
+  flex-grow: 1;
+  column-width: 400px;
+  column-gap: 20px;
   flex-wrap: wrap;
   overflow-y: auto;
 }
@@ -88,10 +95,9 @@
 }
 
 .todo-list {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  height: auto;
-  width: auto;
 }
 
 .to-do-text {
