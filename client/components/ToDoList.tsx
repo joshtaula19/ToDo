@@ -39,23 +39,29 @@ export function TodoList() {
     <div>
       <ul>
         {data.items.map((todo: ToDo) => (
-          <li key={todo.id}>
-            {todo.name} -
-            <button
-              onClick={() => handleClickIm(todo)}
-              aria-label={`Mark as ${
-                todo.important ? 'not important' : 'important'
-              }`}
-            >
-              {todo.important ? '❗️' : '❓'}
-            </button>
-            <button
-              onClick={() => handleClickDone(todo)}
-              aria-label={`Mark as ${todo.done ? 'not done' : 'done'}`}
-            >
-              {todo.done ? '✅' : '❌'}
-            </button>
-            <button onClick={() => deleteTodo(todo.id)}>🗑️</button>
+          <li className="todo-li" key={todo.id}>
+            {todo.name}
+            <div className="button-container">
+              <button
+                className="button"
+                onClick={() => handleClickIm(todo)}
+                aria-label={`Mark as ${
+                  todo.important ? 'not important' : 'important'
+                }`}
+              >
+                {todo.important ? '❗️' : '❓'}
+              </button>
+              <button
+                className="button"
+                onClick={() => handleClickDone(todo)}
+                aria-label={`Mark as ${todo.done ? 'not done' : 'done'}`}
+              >
+                {todo.done ? '✅' : '❌'}
+              </button>
+              <button className="button" onClick={() => deleteTodo(todo.id)}>
+                🗑️
+              </button>
+            </div>
             {/* <label>
               important
               <input

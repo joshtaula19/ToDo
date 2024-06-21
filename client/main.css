@@ -6,14 +6,45 @@
 }
 
 .page-title {
+  display: inline-block;
+  padding: 20px;
   color: var(--primary-color);
-  font-size: 32px;
+  font-size: 40px;
+  font-family: Cambria, Cochin;
   margin-bottom: 20px;
 }
 
+.todo-li {
+  background-color: var(--background-color);
+  border-radius: 1em;
+  padding: 15px;
+  font-size: 20px;
+  font-family: Cambria, Cochin;
+  color: var(--text-color);
+  margin: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.button {
+  width: 30px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .todo-container {
-  width: 100%;
-  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: auto;
   background-color: var(--secondary-color);
   padding: 20px;
   border-radius: 5px;
@@ -21,31 +52,36 @@
 }
 
 .new-todo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--background-color);
   padding: 25px;
   border-radius: 5px;
-  width: 90%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .todo-list {
-  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
 }
 
 .to-do-text {
-  width: 90%;
+  width: 250px;
+  height: 50px;
+  font-family: Cambria, Cochin;
   padding: 10px;
   border: 1px solid var(--secondary-color);
   border-radius: 3px;
   font-size: 16px;
   color: var(--text-color);
   background-color: var(--background-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .button-to-do {
+  width: 200px;
+  font-family: Cambria, Cochin;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: var(--primary-color);
@@ -55,6 +91,7 @@
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .button-to-do:hover {
